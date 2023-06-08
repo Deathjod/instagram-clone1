@@ -1,0 +1,26 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+* {
+  font-family: Arial;
+}
+
+html {
+  font-size: 10px;
+}
+
+.tab-bar {
+  @include simple-flex(space-between, center, row);
+  width: 100%;
+  min-height: 50px;
+  background-color: $background-secondary;
+  position: sticky;
+  bottom: 0;
+  padding: 0 26px;
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $background-primary;
+  }
+}
